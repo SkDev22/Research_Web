@@ -20,6 +20,10 @@ import Listings from "./pages/Listings";
 import MyListings from "./pages/MyListings";
 import Message from "./pages/Message";
 import Analytics from "./pages/Analytics";
+// import Auth from "./pages/Auth";
+import SignUp from "./pages/SignUp";
+import Login from "./pages/Login";
+import VerifyOTP from "./pages/VerifyOTP";
 // import Chat from "./pages/Chat";
 
 function App() {
@@ -28,15 +32,13 @@ function App() {
       <Router>
         <Routes>
           {/* Main Routes */}
-          <Route path="/" element={<Home />} /> {/* Backend done */}
-          <Route path="/services" element={<Services />} /> {/* Backend done */}
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/booking-page/:id" element={<BookingPage />} />
           <Route path="/booking" element={<BookingForm />} />{" "}
-          {/* Backend done */}
           <Route path="/thank-you" element={<ThankYouPage />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
-          {/* User Dashboard Routes */}
           <Route path="/dashboard" element={<BookingDashboard />} />
           <Route path="/profile" element={<Profile />}>
             <Route index element={<PersonalInfo />} />
@@ -48,10 +50,13 @@ function App() {
           {/* Listings */}
           <Route path="/listings" element={<Listings />} />
           <Route path="/myListings" element={<MyListings />} />
+          {/* <Route path="/auth" element={<Auth />} /> */}
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/verify-otp" element={<VerifyOTP />} />
           {/* Message */}
           <Route path="/message" element={<Message />} />
           <Route path="/analytics" element={<Analytics />} />
-          {/* <Route path="/chat" element={<Chat />} /> */}
           {/* Admin Routes */}
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<Dashboard />} />

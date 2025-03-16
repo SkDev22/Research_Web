@@ -458,9 +458,20 @@ import Sidebar from "../components/sidebar/Sidebar";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const Listings = () => {
   const navigate = useNavigate();
+
+  const handleSuccessAlert = () => {
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "Your work has been saved",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -533,7 +544,8 @@ const Listings = () => {
         }
       );
       console.log("Listing created:", response.data);
-      alert("Listing created successfully!");
+      // alert("Listing created successfully!");
+      handleSuccessAlert();
       navigate("/myListings"); // Redirect after successful submission
     } catch (error) {
       console.error("Error creating listing:", error);

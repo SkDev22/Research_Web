@@ -4,6 +4,7 @@ const cors = require("cors");
 require("dotenv").config();
 const listingRoute = require("./routes/listings_route.js");
 const bookingRoute = require("./routes/booking_route.js");
+const authRoutes = require("./routes/auth.route.js");
 
 //Connect the server
 const app = express();
@@ -24,6 +25,7 @@ mongoose
 //Routes
 app.use("/listings", listingRoute);
 app.use("/bookings", bookingRoute);
+app.use("/api/auth", authRoutes);
 
 // Image Upload Route
 app.use("/images", express.static("uploads"));

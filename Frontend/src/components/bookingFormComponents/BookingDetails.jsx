@@ -92,7 +92,6 @@ const BookingDetails = ({ formData, onInputChange, errors }) => {
   //     ],
   //   },
   // ];
-  
 
   return (
     <motion.div
@@ -222,12 +221,12 @@ const BookingDetails = ({ formData, onInputChange, errors }) => {
 
           <div>
             <label
-              htmlFor="nic"
+              htmlFor="duration"
               className="block text-sm font-medium text-gray-700"
             >
-              NIC
+              Duration
             </label>
-            {/* <select
+            <select
               id="duration"
               name="duration"
               value={formData.duration}
@@ -244,19 +243,6 @@ const BookingDetails = ({ formData, onInputChange, errors }) => {
             </select>
             {errors.duration && (
               <p className="mt-1 text-sm text-red-600">{errors.duration}</p>
-            )} */}
-            <input
-              type="text"
-              id="nic"
-              name="NIC"
-              value={formData.nic}
-              onChange={handleChange}
-              className={`mt-1 block w-full rounded-md shadow-sm ${
-                errors.phone ? "border-red-300" : "border-gray-300"
-              } focus:border-amber-500 focus:ring-amber-500`}
-            />
-            {errors.nic && (
-              <p className="mt-1 text-sm text-red-600">{errors.nic}</p>
             )}
           </div>
         </div>

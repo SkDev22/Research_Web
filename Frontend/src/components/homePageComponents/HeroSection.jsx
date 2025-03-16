@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { IconDirections } from "@tabler/icons-react";
-// import { IconHeartStar } from "@tabler/icons-react";
 import { IconPointFilled } from "@tabler/icons-react";
 import {
   IconMapPin,
